@@ -1,0 +1,19 @@
+{
+  "name": "w5-monuments-guillem",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "build:dev": "tsc -w",
+    "start": "node .",
+    "start:dev": "node --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}
