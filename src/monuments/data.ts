@@ -1,6 +1,6 @@
-import type { Monument } from "./types";
+import type { Monument } from "../monuments/types";
 
-const worldMonuments: Monument[] = [
+export const worldMonuments: Monument[] = [
   {
     id: "1",
     name: "Taj Mahal",
