@@ -10,10 +10,6 @@
       "files": ["*.ts", "*.tsx"],
       "rules": {
         "@typescript-eslint/consistent-type-definitions": ["error", "interface"]
-      },
-      "plugins": ["jest"],
-      "env": {
-        "jest/globals": true
       }
     }
   ],
