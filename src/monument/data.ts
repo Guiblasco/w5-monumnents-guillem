@@ -1,6 +1,6 @@
-import type { Monument } from "../monuments/types";
+import type { Monument } from "./types";
 
-export const worldMonuments: Monument[] = [
+export const monuments: Monument[] = [
   {
     id: "1",
     name: "Taj Mahal",
@@ -36,7 +36,7 @@ export const worldMonuments: Monument[] = [
     name: "Estatua de la Libertad",
     city: "New York",
     country: "Estados Unidos",
-    description: `La Libertad iluminando el mundo, más conocida como la Estatua de la Libertad,  
+    description: `La Libertad iluminando el mundo, más conocida como la Estatua de la Libertad, 
     es uno de los monumentos más famosos de Nueva York, de los Estados Unidos y de todo el mundo. 
     Se encuentra en la isla de la Libertad al sur de la isla de Manhattan, 
     junto a la desembocadura del río Hudson y cerca de la isla Ellis. 
@@ -45,10 +45,10 @@ export const worldMonuments: Monument[] = [
     como un signo de amistad entre las dos naciones. 
     Fue inaugurada el 28 de octubre de 1886 en presencia del presidente estadounidense 
     de la época, Grover Cleveland. La estatua es obra del escultor francés Frédéric Auguste Bartholdi
-     y la estructura interna fue diseñada por el ingeniero Alexandre Gustave Eiffel. 
-     El arquitecto francés Eugène Viollet-le-Duc se encargó de la elección de los cobres utilizados para la construcción de la estatua. 
-     El 15 de octubre de 1924, la estatua fue declarada como monumento nacional de los Estados Unidos y 
-     el 15 de octubre de 1965 se añadió la isla Ellis. Desde 1984 es considerada Patrimonio de la Humanidad por la Unesco`,
+    y la estructura interna fue diseñada por el ingeniero Alexandre Gustave Eiffel. 
+    El arquitecto francés Eugène Viollet-le-Duc se encargó de la elección de los cobres utilizados para la construcción de la estatua. 
+    El 15 de octubre de 1924, la estatua fue declarada como monumento nacional de los Estados Unidos y 
+    el 15 de octubre de 1965 se añadió la isla Ellis. Desde 1984 es considerada Patrimonio de la Humanidad por la Unesco`,
     imageUrl:
       "https://es.wikipedia.org/wiki/Estatua_de_la_Libertad#/media/Archivo:Statue_of_Liberty_7.jpg",
   },
