@@ -1,27 +1,32 @@
 import type { Request, Response } from "express";
 import MonumentsController from "../MonumentsController.js";
+import { monuments } from "../../../data.js";
 
-describe("Given the metoth getMonuments", () => {
+beforeEach(() => {
+  jest.restoreAllMocks();
+});
+
+describe("Given the getMonuments method of monumentsController class", () => {
   const monumentController = new MonumentsController();
   const req: Partial<Request> = {};
   const res: Partial<Response> = {
     status: jest.fn().mockReturnThis(),
-    json: jest.fn().mockReturnThis(),
+    json: jest.fn(),
   };
 
-  describe("When it's called with metoth getMonuments on response status 200", () => {
-    test("Then it should return the metoth getMonuments status with 200", () => {
+  describe("When it receives a response", () => {
+    test("Then it should call response's status method with 200", () => {
       monumentController.getMonuments(req as Request, res as Response);
 
       expect(res.status).toHaveBeenCalled();
     });
   });
 
-  describe("When it's called with metoth getMonuments with response json with monuments array", () => {
-    test("Then it shoud return one array with monuments ", () => {
+  describe("When it receives response", () => {
+    test("Then it call response's method json with monuments list", () => {
       monumentController.getMonuments(req as Request, res as Response);
 
-      expect(res.json).toHaveBeenCalled();
+      expect(res.json).toHaveBeenCalledWith({ monuments });
     });
   });
 });
