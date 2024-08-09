@@ -3,11 +3,11 @@ import MonumentsController from "../MonumentsController.js";
 import { monuments } from "../../../data.js";
 
 beforeEach(() => {
-  jest.restoreAllMocks();
+  jest.clearAllMocks();
 });
 
 describe("Given the getMonuments method of monumentsController class", () => {
-  const monumentController = new MonumentsController();
+  const monumentController = new MonumentsController(monuments);
   const req: Partial<Request> = {};
   const res: Partial<Response> = {
     status: jest.fn().mockReturnThis(),

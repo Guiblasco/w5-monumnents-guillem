@@ -1,11 +1,13 @@
 import type { Request, Response } from "express";
 import type { MonumentsControllerStructure } from "./types";
-import { monuments } from "../../data.js";
+import type { Monument } from "../../types";
 
 class MonumentsController implements MonumentsControllerStructure {
-  getMonuments(_req: Request, res: Response) {
-    res.status(200).json({ monuments });
-  }
+  constructor(readonly monuments: Monument[]) {}
+
+  getMonuments = (_req: Request, res: Response): void => {
+    res.status(200).json({ monuments: this.monuments });
+  };
 }
 
 export default MonumentsController;
