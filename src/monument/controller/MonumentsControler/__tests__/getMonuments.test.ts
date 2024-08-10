@@ -1,13 +1,32 @@
 import type { Request, Response } from "express";
 import MonumentsController from "../MonumentsController.js";
-import { monuments } from "../../../data.js";
+import { type Monument } from "../../../types.js";
 
 beforeEach(() => {
   jest.clearAllMocks();
 });
 
 describe("Given the getMonuments method of monumentsController class", () => {
-  const monumentController = new MonumentsController(monuments);
+  const monumentsTest: Monument[] = [
+    {
+      id: "1",
+      name: "Neptune Fountain",
+      city: "Bologna",
+      country: "Italy",
+      description: "",
+      imageUrl: "",
+    },
+    {
+      id: "2",
+      name: "Coliseum",
+      city: "Roma",
+      country: "Italy",
+      description: "",
+      imageUrl: "",
+    },
+  ];
+
+  const monumentController = new MonumentsController(monumentsTest);
   const req: Partial<Request> = {};
   const res: Partial<Response> = {
     status: jest.fn().mockReturnThis(),
@@ -26,7 +45,7 @@ describe("Given the getMonuments method of monumentsController class", () => {
     test("Then it call response's method json with monuments list", () => {
       monumentController.getMonuments(req as Request, res as Response);
 
-      expect(res.json).toHaveBeenCalledWith({ monuments });
+      expect(res.json).toHaveBeenCalledWith({ monuments: monumentsTest });
     });
   });
 });

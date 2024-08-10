@@ -4,6 +4,6 @@ export default {
   transform: {
     "^.+.tsx?$": ["ts-jest", {}],
   },
-  rootDir: "src",
+  collectCoverageFrom: ["src/**/*.{js,jsx,ts,tsx}"],
   resolver: "jest-ts-webcompat-resolver",
 };
