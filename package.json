@@ -12,8 +12,9 @@
   "scripts": {
     "build": "tsc",
     "build:dev": "tsc -w",
-    "start": "node --env-file=.env dist/index.js",
+    "start": "node --env-file=.env dist/index.js .",
     "start:dev": "node --env-file=.env --watch .",
+    "start:prod": "node public/index.js",
     "prepare": "husky",
     "test": "jest",
     "test:dev": "jest --watchAll"
