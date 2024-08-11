@@ -4,6 +4,7 @@ export default {
   transform: {
     "^.+.tsx?$": ["ts-jest", {}],
   },
-  collectCoverageFrom: ["src/**/*.{js,jsx,ts,tsx}"],
+  testFilePath: ["src/**/*.{js,jsx,ts,tsx}"],
+  coverage: { path: "src/**/*" },
   resolver: "jest-ts-webcompat-resolver",
 };
