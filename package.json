@@ -12,7 +12,7 @@
   "scripts": {
     "build": "tsc",
     "build:dev": "tsc -w",
-    "start": "node --env-file=.env .",
+    "start": "node --env-file=.env dist/index.js",
     "start:dev": "node --env-file=.env --watch .",
     "prepare": "husky",
     "test": "jest",
