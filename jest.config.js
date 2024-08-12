@@ -4,7 +4,7 @@ export default {
   transform: {
     "^.+.tsx?$": ["ts-jest", {}],
   },
-  testFilePath: ["src/**/*.{js,jsx,ts,tsx}"],
+  testMatch: ["**/src/**/*.test.ts"],
   coverage: { path: "src/**/*" },
-  resolver: "jest-ts-webcompat-resolver",
+  resolver: "ts-jest-resolver",
 };
