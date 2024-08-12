@@ -12,12 +12,12 @@
   "scripts": {
     "build": "tsc",
     "build:dev": "tsc -w",
-    "start": "node --env-file=.env dist/index.js .",
+    "start": "node --env-file=.env .",
     "start:dev": "node --env-file=.env --watch .",
-    "start:prod": "node public/index.js",
     "prepare": "husky",
     "test": "jest",
-    "test:dev": "jest --watchAll"
+    "test:dev": "jest --watchAll",
+    "test:coverage": "jest --coverage"
   },
   "keywords": [],
   "author": "",
@@ -31,7 +31,6 @@
     "@types/morgan": "^1.9.9",
     "@typescript-eslint/eslint-plugin": "7.18",
     "@typescript-eslint/parser": "7.18",
-    "coverage": "^0.4.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-xo": "^0.45.0",
     "eslint-config-xo-typescript": "^5.0.0",
@@ -44,7 +43,7 @@
   "dependencies": {
     "chalk": "^5.3.0",
     "express": "^4.19.2",
-    "jest-ts-webcompat-resolver": "^1.0.0",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "ts-jest-resolver": "^2.0.1"
   }
 }
