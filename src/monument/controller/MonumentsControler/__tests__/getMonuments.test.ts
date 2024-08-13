@@ -1,4 +1,4 @@
-import type { Request, Response } from "express";
+import type { NextFunction, Request, Response } from "express";
 import MonumentsController from "../MonumentsController.js";
 import { type Monument } from "../../../types.js";
 
@@ -32,10 +32,11 @@ describe("Given the getMonuments method of monumentsController class", () => {
     status: jest.fn().mockReturnThis(),
     json: jest.fn(),
   };
+  const next: NextFunction = jest.fn();
 
   describe("When it receives a response", () => {
     test("Then it should call response's status method with 200", () => {
-      monumentController.getMonuments(req as Request, res as Response);
+      monumentController.getMonuments(req as Request, res as Response, next);
 
       expect(res.status).toHaveBeenCalled();
     });
@@ -43,7 +44,7 @@ describe("Given the getMonuments method of monumentsController class", () => {
 
   describe("When it receives response", () => {
     test("Then it call response's method json with monuments list", () => {
-      monumentController.getMonuments(req as Request, res as Response);
+      monumentController.getMonuments(req as Request, res as Response, next);
 
       expect(res.json).toHaveBeenCalledWith({ monuments: monumentsTest });
     });
