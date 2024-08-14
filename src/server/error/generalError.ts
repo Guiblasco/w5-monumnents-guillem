@@ -1,4 +1,5 @@
 import type { NextFunction, Request, Response } from "express";
+import type ServerError from "./ServerError";
 
 export const generalError = (
   error: Error,
@@ -7,6 +8,6 @@ export const generalError = (
   _next: NextFunction,
 ): void => {
   res
-    .status(res.statusCode || 500)
-    .json({ error: true, message: error.message });
+    .status((error as ServerError).statusCode)
+    .json({ message: error.message });
 };
