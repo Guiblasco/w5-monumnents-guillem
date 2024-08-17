@@ -16,5 +16,13 @@ describe("Given getPing method of healthyChekController class", () => {
 
       expect(res.status).toHaveBeenCalledWith(200);
     });
+
+    test("Then it should call response's json method with a property message values 'pong'", () => {
+      const expectMessage: { message: string } = { message: "Pong" };
+
+      healthyCheckController.getPing(req as Request, res as Response, next);
+
+      expect(res.json).toHaveBeenCalledWith(expectMessage);
+    });
   });
 });
