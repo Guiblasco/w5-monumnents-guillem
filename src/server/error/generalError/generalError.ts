@@ -1,5 +1,5 @@
 import type { NextFunction, Request, Response } from "express";
-import type ServerError from "./ServerError";
+import type ServerError from "../ServerError/ServerError.js";
 
 export const generalError = (
   error: Error,

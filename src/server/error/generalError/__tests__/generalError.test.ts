@@ -1,6 +1,6 @@
-import type { NextFunction, Response, Request } from "express";
-import { generalError } from "../generalError/generalError.js";
-import ServerError from "../ServerError/ServerError.js";
+import { type NextFunction, type Request, type Response } from "express";
+import { generalError } from "../generalError.js";
+import ServerError from "../../ServerError/ServerError.js";
 
 beforeEach(() => {
   jest.clearAllMocks();
