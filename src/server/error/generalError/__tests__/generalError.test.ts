@@ -7,7 +7,7 @@ beforeEach(() => {
 });
 
 describe("Given the funcion generalError", () => {
-  describe("When it receives a request", () => {
+  describe("When it receives a request with error's code 404 and message 'Not found'", () => {
     const expectStatusCode = 404;
     const expectErrorMessage = { message: "Not found" };
     const error = new ServerError("Not found", 404);
