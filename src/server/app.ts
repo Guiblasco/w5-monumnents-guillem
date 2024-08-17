@@ -1,10 +1,10 @@
 import express from "express";
 import morgan from "morgan";
-import { generalError } from "./error/generalError.js";
 import monumentsRouter from "../monument/router/monumentsRouter.js";
 import cors from "cors";
-import HealthyCheckController from "./HealthyCheckController/HealthyCheckController.js";
 import serverRouter from "./router/serverRouter.js";
+import { generalError } from "./error/generalError/generalError.js";
+import { unknownPath } from "./unknownPath/unknownPath.js";
 
 const app = express();
 
@@ -14,6 +14,8 @@ app.use(morgan("dev"));
 app.get("/ping", serverRouter);
 
 app.get("/monuments", monumentsRouter);
+
+app.use(unknownPath);
 
 app.use(generalError);
 
