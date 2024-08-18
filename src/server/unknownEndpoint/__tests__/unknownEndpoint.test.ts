@@ -1,6 +1,6 @@
 import { type NextFunction, type Request, type Response } from "express";
 import ServerError from "../../error/ServerError/ServerError";
-import { unknownPath } from "../unknownPath";
+import { unknownPath } from "../unknownEndpoint";
 
 describe("Given the function unknownPath", () => {
   describe("When it receives a request with an unknownPath", () => {

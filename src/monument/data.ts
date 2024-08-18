@@ -14,7 +14,7 @@ export const monuments: Monument[] = [
      Se estima que en su construcción trabajaron unos 20 000 obreros bajo dirección de un conjunto de arquitectos 
      liderados por el arquitecto de la corte, Ustad Ahmad Lahori.`,
     imageUrl:
-      "https://es.wikipedia.org/wiki/Taj_Mahal#/media/Archivo:Taj_Mahal_(Edited).jpeg",
+      "https://upload.wikimedia.org/wikipedia/commons/1/1d/Taj_Mahal_%28Edited%29.jpeg",
   },
   {
     id: "2",
@@ -29,7 +29,7 @@ export const monuments: Monument[] = [
     por el ingeniero civil francés Gustave Eiffel y sus colaboradores
     para la Exposición Universal de 1889 en París (Francia).`,
     imageUrl:
-      "https://es.wikipedia.org/wiki/Torre_Eiffel#/media/Archivo:Eiffelturm.JPG",
+      "https://upload.wikimedia.org/wikipedia/commons/d/d2/Eiffelturm.JPG",
   },
   {
     id: "3",
@@ -50,7 +50,7 @@ export const monuments: Monument[] = [
     El 15 de octubre de 1924, la estatua fue declarada como monumento nacional de los Estados Unidos y 
     el 15 de octubre de 1965 se añadió la isla Ellis. Desde 1984 es considerada Patrimonio de la Humanidad por la Unesco`,
     imageUrl:
-      "https://es.wikipedia.org/wiki/Estatua_de_la_Libertad#/media/Archivo:Statue_of_Liberty_7.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/a/a1/Statue_of_Liberty_7.jpg",
   },
   {
     id: "4",
@@ -65,7 +65,7 @@ export const monuments: Monument[] = [
      Es sede de la compañía de Ópera de Australia, la Compañía de Teatro de Sídney y la Orquesta Sinfónica de Sídney. 
      Está administrada por la Opera House Trust, un organismo público del gobierno estatal de Nueva Gales del Sur.`,
     imageUrl:
-      "https://es.wikipedia.org/wiki/%C3%93pera_de_S%C3%ADdney#/media/Archivo:Sydney_Opera_House_-_Dec_2008.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Sydney_Opera_House_-_Dec_2008.jpg",
   },
   {
     id: "5",
@@ -78,6 +78,6 @@ export const monuments: Monument[] = [
     Conocido originalmente como Anfiteatro Flavio pasa a ser llamado Coliseo porque a su lado había una gran estatua, 
     el Coloso de Nerón, un monumento dedicado al emperador Nerón que posteriormente sufrió transformaciones y llegó a desaparecer.`,
     imageUrl:
-      "https://es.wikipedia.org/wiki/Coliseo#/media/Archivo:Colosseo_2020.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/d/de/Colosseo_2020.jpg",
   },
 ];
